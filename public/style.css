@@ -4,7 +4,7 @@
     box-sizing: border-box;
     --box: rgba(4, 53, 32, 0.3);
     --button: rgba(0, 0, 0, 0.8);
-    --wine-list-item: rgba(4, 53, 32, 0.3);
+    --term-list-item: rgba(4, 53, 32, 0.3);
     --primary-text: rgba(4, 53, 32, 0.8);
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 
-.wine-container {
+.term-container {
     color: white;
     /* max-width: 40vw; */
     margin-top: 3vh;
@@ -62,40 +62,40 @@ ul {
 }
 
 
-.wine-list-item {
+.term-list-item {
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    background-color: var(--wine-list-item);
+    background-color: var(--term-list-item);
     display: flex;
     flex-direction: row;
 }
 
-.wine-list-item-content {
+.term-list-item-content {
     font-size: .8rem;
 }
 
-.wine-header input {
+.term-header input {
    width: 30%;
     border-radius: 5px;
     border: none;
 }
 
-.wine-list {
+.term-list {
     padding-bottom: 10px;
     padding: 10px auto;
     margin: 0 auto;
 }
 
-.wine-list-item input[type="text"] {
+.term-list-item input[type="text"] {
     border: none;
 }
 
-.wine-list-item input[type="text"]:last-of-type {
+.term-list-item input[type="text"]:last-of-type {
     margin-bottom: 10px;
 }
 
-.wine-list-item .confirm {
+.term-list-item .confirm {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -112,7 +112,7 @@ ul {
     display: block;
 }
 
-.wine-list-item .cancel {
+.term-list-item .cancel {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     text-decoration: none;
@@ -129,24 +129,24 @@ ul {
     width: 100px;
 }
 
-.wine-list-item div {
+.term-list-item div {
     flex-grow: 2;
 }
 
-.wine-list-item .edit {
+.term-list-item .edit {
     color: white;
     margin-right: 10px;
     cursor: pointer;
     margin-left: auto;
 }
 
-.wine-list-item .remove {
+.term-list-item .remove {
     color:  white;
     margin-right: 5px;
     cursor: pointer;
 }
 
-.wineType, .wineTypeBR {
+.termType, .termTypeBR {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -170,7 +170,7 @@ input[type="radio"]:checked {
     background-color: rgba(176, 51, 23, 1);
 }
 
-.wineType .red, .wineType .white, .wineType .other {
+.termType .red, .termType .white, .termType .other {
     width: 30%;
 }
 

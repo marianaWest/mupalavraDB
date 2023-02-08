@@ -13,14 +13,14 @@
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <section class="wine-container container">
+    <section class="term-container container">
         <h2>edit term</h2>
-        <section class="wine">
+        <section class="term">
          
-            <ul class="wine-list">
+            <ul class="term-list">
                 <% mupaTerms.forEach(item => { %>
                     <% if(item._id == idTerm) { %>
-                    <li class="wine-list-item">
+                    <li class="term-list-item">
                         <form action="/edit/<%= item._id %>" method="POST">
                             <label for="term">Term</label>  
                             <input type="text" name="term" value="<%= item.term %>">
@@ -31,11 +31,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
                         </form>
                     </li>
                     <% } else { %>
-                            <li class="wine-list-item">
-                                <div class="wine-list-item-title">
-                                    <%= item.ter, %>
+                            <li class="term-list-item">
+                                <div class="term-list-title">
+                                    <%= item.term %>
                                 </div>
-                                <div class="wine-list-item-content">
+                                <div class="term-list-content">
                                     <%= item.description %>
                                 </div>
                                
