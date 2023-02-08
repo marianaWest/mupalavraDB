@@ -1,0 +1,257 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --box: rgba(4, 53, 32, 0.3);
+    --button: rgba(0, 0, 0, 0.8);
+    --wine-list-item: rgba(4, 53, 32, 0.3);
+    --primary-text: rgba(4, 53, 32, 0.8);
+}
+
+body {
+    background: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container, .row {
+    padding: 0;
+}
+
+
+.wine-container {
+    color: white;
+    /* max-width: 40vw; */
+    margin-top: 3vh;
+    background: var(--box);
+    border-radius: 20px;
+}
+
+
+h2 {
+    padding: 10px;
+    font-family: 'Righteous', 'Candara';
+    font-size: 3rem;
+    color: var(--primary-text);
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+}
+
+textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.wine-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--wine-list-item);
+    display: flex;
+    flex-direction: row;
+}
+
+.wine-list-item-content {
+    font-size: .8rem;
+}
+
+.wine-header input {
+   width: 30%;
+    border-radius: 5px;
+    border: none;
+}
+
+.wine-list {
+    padding-bottom: 10px;
+    padding: 10px auto;
+    margin: 0 auto;
+}
+
+.wine-list-item input[type="text"] {
+    border: none;
+}
+
+.wine-list-item input[type="text"]:last-of-type {
+    margin-bottom: 10px;
+}
+
+.wine-list-item .confirm {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(176, 51, 23, 1);
+    margin-left: 5px;
+    margin-bottom: 5px;
+    max-height: 30px;
+    width: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+}
+
+.wine-list-item .cancel {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color:  rgba(176, 51, 23, 1);
+    margin-left: 5px;
+    margin-bottom: 5px;
+    max-height: 30px;
+    display: block;
+    width: 100px;
+}
+
+.wine-list-item div {
+    flex-grow: 2;
+}
+
+.wine-list-item .edit {
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.wine-list-item .remove {
+    color:  white;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.wineType, .wineTypeBR {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    background-clip: content-box;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: rgba(176, 51, 23, 1);
+}
+
+.wineType .red, .wineType .white, .wineType .other {
+    width: 30%;
+}
+
+.addBottle {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 8%;
+}
+
+.addBottleButton {
+    width: 160px;
+    height: 36px;
+    background-color: var(--primary-text);
+    border-radius: 5px;
+    position: relative;
+}
+
+.addBottleButton span {
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    width: 120px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.addBottleButton button {
+    /* display: inline-block; */
+    color: white;
+    width: 120px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+
+}
+
+.addBottleInput label {
+    width: 40%;
+}
+
+.addBottleInput input {
+    width: 58%;
+}
+
+.fa-solid .fa-house {
+    border: 1px solid red;
+}
+
+.arrow {
+    color:  rgba(176, 51, 23, 1);
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.addCellar1 {
+    max-width: 50vw;
+}
+
+.addCellar1 h3 {
+    color: var(--primary-text);
+}
+
+.addCellar1 label {
+    max-width: 25%;
+    padding-bottom: 5px;
+}
+.addCellar1 input {
+    border: none;
+    max-width: 65%;
+}
+
