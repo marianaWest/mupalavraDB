@@ -61,6 +61,7 @@ ul {
     list-style: none;
 }
 
+
 .wine-list-item {
     padding: 10px;
     margin-top: 10px;
@@ -102,7 +103,7 @@ ul {
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
-    background-color: rgba(176, 51, 23, 1);
+    background-color: var(--button);
     margin-left: 5px;
     margin-bottom: 5px;
     max-height: 30px;
@@ -120,7 +121,7 @@ ul {
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
-    background-color:  rgba(176, 51, 23, 1);
+    background-color: var(--button);
     margin-left: 5px;
     margin-bottom: 5px;
     max-height: 30px;
@@ -227,12 +228,12 @@ button {
     width: 58%;
 }
 
-.fa-solid .fa-house {
+/* .fa-solid .fa-house {
     border: 1px solid red;
-}
+} */
 
 .arrow {
-    color:  rgba(176, 51, 23, 1);
+    color:  var(--button);
     cursor: pointer;
     display: block;
     text-align: center;
