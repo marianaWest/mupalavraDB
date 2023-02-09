@@ -7,9 +7,6 @@
 
     <title>Mupalavra</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lobster&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -26,26 +23,29 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
             <h2>MUPALAVRA</h2>
         </div>
       
-        <div class="row text-center align-items-center all-cellars">
-            <div class="col mx-3 p-3 wine-container">
-                <h3>Terms</h3>
+        <div class="row text-center align-items-center term-container">
+            <div class="col mx-3 p-3">
+                <h3>Termos</h3>
                 <div class="row mx-auto">
                         <ul>
                                 <% termsCol.forEach(item => {%>
-                            <li class="wine-list-item">
-                                <div class="wine-list-item-title">
+                            <li class="item-list">
+                                <div>
                                     <%= item.term %>
                                 </div>
-                                <div class="wine-list-item-content">
+                                <div>
                                     <%= item.description %>
                                 </div>
-                                <a href="/edit/<%= item._id %>" class="edit"><span class="fas fa-edit"></span></a>
-                                <a href="/remove/<%= item._id %>" class="remove"><span class="fas fa-times"></span></a>
+                                <div class="icons">
+                                    <a href="/edit/<%= item._id %>" class="edit"><span class="fas fa-edit"></span></a>
+                                    <a href="/remove/<%= item._id %>" class="remove"><span class="fas fa-times"></span></a>
+                                </div>
+                                
                             </li>
                             <% }) %>
                         </ul>
                         <div class="row d-flex flex-row justify-content-end">
-                            <a href="/addTerm" class="addBottleButton"><span class="fas fa-plus"> Add term</span></a>
+                            <a href="/addTerm" class="addTermButton"><span>+ adicionar</span></a>
                         </div>
                     </div>
                 </div>           

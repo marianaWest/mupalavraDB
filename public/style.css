@@ -4,8 +4,12 @@
     box-sizing: border-box;
     --box: rgba(4, 53, 32, 0.3);
     --button: rgba(0, 0, 0, 0.8);
-    --wine-list-item: rgba(4, 53, 32, 0.3);
+    --item-list: rgba(4, 53, 32, 0.3);
     --primary-text: rgba(4, 53, 32, 0.8);
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -17,27 +21,25 @@ body {
     padding: 0;
 }
 
-
-.wine-container {
+.term-container {
     color: white;
-    /* max-width: 40vw; */
     margin-top: 3vh;
     background: var(--box);
     border-radius: 20px;
 }
 
-
 h2 {
     padding: 10px;
     font-family: 'Righteous', 'Candara';
-    font-size: 3rem;
+    font-size: 6rem;
     color: var(--primary-text);
     text-align: center;
 }
 
 h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+    color: var(--primary-text);
+    font-size: 3rem;
 }
 
 input {
@@ -62,40 +64,26 @@ ul {
 }
 
 
-.wine-list-item {
+.item-list {
     padding: 10px;
-    margin-top: 10px;
     border-radius: 5px;
-    background-color: var(--wine-list-item);
+    background-color: var(--item-list);
+    margin: 10px auto;
+    font-size: 1.8rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.wine-list-item-content {
-    font-size: .8rem;
-}
-
-.wine-header input {
-   width: 30%;
-    border-radius: 5px;
+.list-item input[type="text"] {
     border: none;
 }
 
-.wine-list {
-    padding-bottom: 10px;
-    padding: 10px auto;
-    margin: 0 auto;
-}
-
-.wine-list-item input[type="text"] {
-    border: none;
-}
-
-.wine-list-item input[type="text"]:last-of-type {
+.list-item input[type="text"]:last-of-type {
     margin-bottom: 10px;
 }
 
-.wine-list-item .confirm {
+.list-item .confirm {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -112,7 +100,7 @@ ul {
     display: block;
 }
 
-.wine-list-item .cancel {
+.list-item .cancel {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     text-decoration: none;
@@ -129,69 +117,37 @@ ul {
     width: 100px;
 }
 
-.wine-list-item div {
+.list-item div {
     flex-grow: 2;
 }
 
-.wine-list-item .edit {
+.icons .edit {
     color: white;
     margin-right: 10px;
     cursor: pointer;
     margin-left: auto;
 }
 
-.wine-list-item .remove {
+.icons .remove {
     color:  white;
     margin-right: 5px;
     cursor: pointer;
 }
 
-.wineType, .wineTypeBR {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    padding: 6px;
-    background-clip: content-box;
-    border: 2px solid white;
-    background-color: white;
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked {
-    background-color: rgba(176, 51, 23, 1);
-}
-
-.wineType .red, .wineType .white, .wineType .other {
-    width: 30%;
-}
-
-.addBottle {
-    width: 90%;
-    margin: 0 auto;
-    padding-left: 8%;
-}
-
-.addBottleButton {
+.addTermButton {
     width: 160px;
     height: 36px;
     background-color: var(--primary-text);
     border-radius: 5px;
     position: relative;
+    font-size: 1.8rem;
 }
 
-.addBottleButton span {
+.addTermButton span {
     display: inline-block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+    font-weight: bold;
     width: 120px;
     margin: 0;
     position: absolute;
@@ -201,9 +157,7 @@ input[type="radio"]:checked {
     transform: translate(-50%, -50%);
 }
 
-.addBottleButton button {
-    /* display: inline-block; */
-    color: white;
+.addTermButton button {
     width: 120px;
     margin: 0;
     position: absolute;
@@ -216,43 +170,34 @@ input[type="radio"]:checked {
 button {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
     border: none;
-
 }
-
-.addBottleInput label {
-    width: 40%;
-}
-
-.addBottleInput input {
-    width: 58%;
-}
-
-/* .fa-solid .fa-house {
-    border: 1px solid red;
-} */
 
 .arrow {
     color:  var(--button);
     cursor: pointer;
     display: block;
-    text-align: center;
+    text-align: end;
 }
 
-.addCellar1 {
-    max-width: 50vw;
+.addTerm {
+    max-width: 70vw;
 }
 
-.addCellar1 h3 {
+/* .addTerm h3 {
     color: var(--primary-text);
-}
+} */
 
-.addCellar1 label {
+.addTerm label {
     max-width: 25%;
     padding-bottom: 5px;
+    font-size: 1.6rem;
 }
-.addCellar1 input {
+
+.addTerm input {
     border: none;
     max-width: 65%;
+    font-size: 1.6rem;
 }
 
