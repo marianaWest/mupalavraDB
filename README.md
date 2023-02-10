@@ -1,8 +1,6 @@
 # Mupalavra Database
 
-[PLACE_FOR_YOUR_IMAGE]
-
-[PLACE_TO_ADD_LINK_FOR_DEPLOYED_VERSION]
+https://user-images.githubusercontent.com/97693233/218067208-6a71b2f3-0c88-4dae-a0f0-83ea20bcb985.mp4
 
 *** This is a work in progress ***
 
