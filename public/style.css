@@ -97,12 +97,15 @@ ul {
     max-height: 30px;
     width: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
     display: block;
 }
 
 .list-item .cancel {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
     text-decoration: none;
     text-align: center;
     border: none;
