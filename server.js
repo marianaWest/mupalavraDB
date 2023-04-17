@@ -51,8 +51,37 @@ app.post("/addTerm", async (req, res) => {
 });
 
 // edit or update term
+app.get("/edit/:id", async (req, res) => {
+  let termsCol;
+  let id = req.params.id;
+  try {
+    termsCol = await MupaTerm.find({});
+    res.render("edit.ejs", { termsCol, id });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
 
+app.post("edit/:id", async (req, res) => {
+  let id = req.params.id;
+  const updatedTerm = MupaTerm.findByIdAndUpdate(id, {
+    term: req.body.term,
+    description: req.body.description,
+  });
+  try {
+    console.log(updatedTerm);
+  } catch (err) {
+    if (err) return res.status(500).send(err);
+  }
+});
 
+app.route("/remove/:id").get((req, res) => {
+  const id = req.params.id;
+  MupaTerm.findByIdAndRemove(id, (err) => {
+    if (err) return res.status(500).send(err);
+    res.redirect("/");
+  });
+});
 
 // initiatize server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -30,7 +30,18 @@
   </head>
 
   <body>
-   
+<p>test</p>
+   <% termsCol.forEach(item => { %>
+<% if(item.id === id) { %>
+<form action="/edit/" method="post">
+  <label for="term">Enter updated term:</label>
+  <input name="name" type="text" placeholder="<%= item.term %>" >
+  <label for="description">Enter new description:</label>
+  <input name="description" type="text" placeholder="<%= item.description %>">
+  <button type="submit">Submit</button>
+</form>
+<% } %>
+  <% }) %>
 
     
   </body>
