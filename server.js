@@ -62,18 +62,7 @@ app.get("/edit/:id", async (req, res) => {
   }
 });
 
-app.post("edit/:id", async (req, res) => {
-  let id = req.params.id;
-  const updatedTerm = MupaTerm.findByIdAndUpdate(id, {
-    term: req.body.term,
-    description: req.body.description,
-  });
-  try {
-    console.log(updatedTerm);
-  } catch (err) {
-    if (err) return res.status(500).send(err);
-  }
-});
+// edit post not working
 
 app.route("/remove/:id").get((req, res) => {
   const id = req.params.id;

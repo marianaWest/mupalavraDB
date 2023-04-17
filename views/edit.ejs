@@ -30,18 +30,29 @@
   </head>
 
   <body>
-<p>test</p>
-   <% termsCol.forEach(item => { %>
-<% if(item.id === id) { %>
-<form action="/edit/" method="post">
-  <label for="term">Enter updated term:</label>
-  <input name="name" type="text" placeholder="<%= item.term %>" >
-  <label for="description">Enter new description:</label>
-  <input name="description" type="text" placeholder="<%= item.description %>">
-  <button type="submit">Submit</button>
-</form>
-<% } %>
-  <% }) %>
+
+    <div class="container pt-5 addTerm">
+      <div class="row text-center ">
+        <h2>Editar termo</h2>
+      </div>
+     <div class="text-left align-items-center p-5 term-container">
+      <% termsCol.forEach(item => { %>
+        <% if(item.id === id) { %>
+        <form action="/edit/" method="post">
+          <label for="term">Entre o novo termo:</label>
+          <input name="name" type="text" placeholder="<%= item.term %>" >
+          <label for="description">Entre a nova descrição:</label>
+          <input name="description" type="text" placeholder="<%= item.description %>">
+          <button type="submit" class="addTermButton">Submit</button>
+        </form>
+        <% } %>
+          <% }) %>
+     </div>
+   
+    </div>
+    
+
+   
 
     
   </body>
